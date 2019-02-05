@@ -1,3 +1,18 @@
+@media screen and (min-width: 1280px) {
+    .image_background {
+        width: 45vw;
+        img {
+            width: 100%;
+        }
+    }
+    main {
+        h1 {
+            font-size: 180px;
+            line-height: 180px;
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
     main {
         h1 {

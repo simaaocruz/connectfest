@@ -2,23 +2,23 @@
 <html>
 
 <head>
-    <title>Page Title</title>
-
+    <title>Connect Fest '19 - July 4th-6th</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/regular.css" integrity="sha384-IG162Tfx2WTn//TRUi9ahZHsz47lNKzYOp0b6Vv8qltVlPkub2yj9TVwzNck6GEF" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous"></head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
     <link href="./dist/main.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+
 <body>
 
-    <header>
+    <header class="animation">
         <div class="leftside">
             <img src="assets/images/logotipo.png" alt="" class="logo" />
         </div>
         <div class="rightside">
-            <!-- <a href="https://www.eventbrite.pt/" target="_blank">
-                <span>Get tickets now</span>
-            </a> -->
-            <a href="mailto:info@connnectfest.com">
+            <a href="mailto:info@connnect.fest">
                 <span>
                     <i class="far fa-envelope"></i>
                 </span>
@@ -29,22 +29,31 @@
     <main>
         <div class="rightside">
             <div class="image_background">
-                <img src="assets/images/image1.png" alt="">
+                <img src="assets/images/image1.png" alt="" class="animation">
             </div>
         </div>
         <div class="leftside">
-            <h1>
-                Techno<span>_</span><br />logy <br/>for all
-            </h1>
-            <div class="date">
-                <p>
-                    july 4th-6th, 2019<br>Porto
-                </p>
+                <h1 class="text"> 
+                    <span class="text__first">
+                        <span class="text__word">Techno_</span>
+                        <span class="text__first-bg"></span>
+                    </span><br />
+                    <span class="text__second">
+                        <span class="text__word">logy</span>
+                        <span class="text__second-bg"></span>
+                    </span><br />
+                    <span class="text__third">
+                        <span class="text__word">for all </span>
+                        <span class="text__third-bg"></span>
+                    </span>
+                </h1>
+            <div class="date animation">
+                <p>july 4th-6th, 2019<br>Porto</p>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="animation">
         <div class="sponsor">
             <span>Sponsored by</span>
             <a href="https://www.bosch.pt/" target="_blank">
@@ -53,6 +62,32 @@
         </div>
     </footer>
 
+
+    <script src='https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+
+    <script>
+        window.onload = function () {
+            var tl = new TimelineLite({
+                    delay: .5
+                }),
+                firstBg = document.querySelectorAll('.text__first-bg'),
+                secBg = document.querySelectorAll('.text__second-bg'),
+                word = document.querySelectorAll('.text__word');
+
+            tl.
+            to(firstBg, 0.2, { scaleX: 1 }).
+            to(secBg, 0.2, { scaleX: 1 }).
+            to(word, 0.1, { opacity: 1 }, "-=0.1").
+            to(firstBg, 0.2, { scaleX: 0 }).
+            to(secBg, 0.2, { scaleX: 0 });
+        };
+
+        $(document).ready(function(){
+            $('.animation').addClass('animate');
+
+        })
+    </script>
 </body>
 
 </html>

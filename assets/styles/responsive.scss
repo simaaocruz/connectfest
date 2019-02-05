@@ -1,0 +1,77 @@
+@media screen and (max-width: 1024px) {
+    main {
+        h1 {
+            font-size: 80px;
+            line-height: 80px;
+        }
+
+        .date {
+            p {
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        padding: 40px 50px;
+    }
+    main {
+        padding-left: 50px;
+        h1 {
+            font-size: 60px;
+            line-height: 60px;
+        }
+    }
+    footer {
+        padding: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        // display: block;
+        padding: 30px 25px;
+        position: relative;
+        .rightside {
+            display: block;
+            width: 100%;
+        }
+        a {
+            margin-left: 15px;
+        }
+    }
+    main {
+        height: auto;
+        display: block;
+        padding: 0 25px;
+        .date {
+            width: 100%;
+            display: block;
+        }
+    }
+    footer {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        display: block;
+        .leftside,
+        .rightside {
+            width: 100%;
+            text-align: center;
+        }
+        a {
+            &:first-of-type {
+                margin-left: -2px;
+            }
+        }
+        .rightside {
+            margin-top: 20px;
+        }
+    }
+}
